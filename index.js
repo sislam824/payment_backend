@@ -30,8 +30,8 @@ app.post("/checkout", async (req, res) => {
           quantity: item.quantity,
         };
       }),
-      success_url: "http://localhost:5173/success",
-      cancel_url: "http://localhost:5173/cancel",
+      success_url: "https://payment-frontend-olive.vercel.app/success",
+      cancel_url: "https://payment-frontend-olive.vercel.app/cancel",
     });
     res.json({ session });
   } catch (error) {
