@@ -33,7 +33,7 @@ app.post("/checkout", async (req, res) => {
       success_url: "https://payment-frontend-olive.vercel.app/success",
       cancel_url: "https://payment-frontend-olive.vercel.app/cancel",
     });
-    res.json({ url: session.url });
+    res.json({ session });
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
